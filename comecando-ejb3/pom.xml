@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.aewinformatica</groupId>
+  <artifactId>comecando-com-ejb3</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>comecando-com-ejb3</name>
+  <description>Projeto Maven com Ejb3</description>
+  
+  	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- JAVA SERVER FACES -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<!-- VERSOES ACIMA PRECISA DE CDI NÂO RECOMENDADO UTILIZAR -->
+			<version>2.2.20</version>
+		</dependency>
+
+		<!-- PRIMEFACES -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
+			<!-- <version>5.1</version> -->
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

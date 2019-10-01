@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+	<display-name>comecando-com-ejb3</display-name>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- DIZER AO JSF QUE O ESTAGIO É DESENVOLVIMENTO MOSTRAR TODOS ERROS != 
+		Production -->
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+	<!-- DIZER AO JSF QUE NÂO QUER CACHE DAS PAGINAS VIEWS PARA EVITAR F5 USAR 
+		APENAS E DESENVOLVIMENTO -->
+	<context-param>
+		<param-name>javax.faces.REFRESH_SERVLET_PERIOD</param-name>
+		<param-value>0</param-value>
+	</context-param>
+	
+	<!-- 		IGNORAR COMENTARIOS -->
+	<context-param>
+		<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- DIZER AO JSF QUAL A EXTENSÃO USADA NO PROJETO -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+	</welcome-file-list>
+</web-app>

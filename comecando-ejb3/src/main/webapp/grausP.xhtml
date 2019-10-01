@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition template="/WEB-INF/templates/Layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="corpo">
+		<h:head>
+			<title>Converter Graus - Stateless</title>
+		</h:head>
+
+		<h:form>
+			<p:outputLabel
+				value="Conversão de Graus utilizando um bean Stateless" />
+			<hr />
+			<p:outputLabel value="Grau em Celsius: " />
+			<p:inputText value="#{grausMB.c}"></p:inputText>
+			<p:commandButton action="#{grausMB.converterParaFahrenheit}"
+				value="Converter" />
+			<br />
+			<h:outputText value="Em Fahrenheit: " />
+			<p:outputLabel value="#{grausMB.resultadoF}" />
+		</h:form>
+
+	</ui:define>
+</ui:composition>
